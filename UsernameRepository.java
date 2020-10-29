@@ -17,7 +17,7 @@ public class UsernameRepository {
     return null; // Still needed because java sucks
   }
 
-  enum UsernameValidationResult {
+  private enum UsernameValidationResult {
     SHORTER_THAN_MINLENGTH,
     LONGER_THAN_MAXLENGTH,
     CORRECT_USERNAME;
