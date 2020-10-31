@@ -45,24 +45,27 @@ public class FestivalDecider {
           return INVALID_MOOD;
         }
 
-        if(weather.toLowerCase() == "raining") {
+        final String lowerWeather = weather.toLowerCase();
+        final String lowerMood = mood.toLowerCase();
+
+        if(lowerWeather == "raining") {
           return DONT_GO_TO_FESTIVAL;
         }
 
-        if(weather.toLowerCase() == "cloudy") {
-          if(mood.toLowerCase() == "good") {
+        if(lowerWeather == "cloudy") {
+          if(lowerMood == "good") {
             return GO_TO_FESTIVAL;
           }
-          if(mood.toLowerCase() == "bored" && accompanyingFriends.size() >= 2) {
+          if(lowerMood == "bored" && accompanyingFriends.size() >= 2) {
             return GO_TO_FESTIVAL;
           }
         }
 
-        if(weather.toLowerCase() == "sunny") {
-          if(mood.toLowerCase() == "bad" && accompanyingFriends.size() >= 1) {
+        if(lowerWeather == "sunny") {
+          if(lowerMood == "bad" && accompanyingFriends.size() >= 1) {
             return GO_TO_FESTIVAL;
           }
-          if(mood.toLowerCase() == "good" || mood.toLowerCase() == "bored") {
+          if(lowerMood == "good" || lowerMood == "bored") {
             return GO_TO_FESTIVAL;
           }
         }
