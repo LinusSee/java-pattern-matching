@@ -1,4 +1,4 @@
-public class Main {
+public class SimpleExampleMain {
 
   public static void main(final String[] args) {
     final UsernameRepository repo = new UsernameRepository();

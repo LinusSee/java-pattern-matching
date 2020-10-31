@@ -14,7 +14,7 @@ public class UsernameRepository {
       case CORRECT_USERNAME:
         return username;
     }
-    return null; // Still needed because java sucks
+    return null; // Still needed because Java sucks
   }
 
   private enum UsernameValidationResult {
